@@ -11,3 +11,11 @@ betaflight settings for quads.
 
 **Flywoo Cinerace20**
 - Bind and fly.
+
+
+**Radiomaster Pocket**
+- Cinerace20 9/29/24
+- Conscendo 9/29/24
+
+**IRX4**
+- Spectrum DSM
