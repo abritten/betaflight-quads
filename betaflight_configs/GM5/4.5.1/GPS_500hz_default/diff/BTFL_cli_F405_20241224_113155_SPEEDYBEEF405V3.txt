@@ -1,0 +1,110 @@
+# 
+
+# diff
+
+# version
+# Betaflight / STM32F405 (S405) 4.5.1 Dec  2 2024 / 01:15:09 (77d01ba3b) MSP API: 1.46
+# config rev: cb1d3ac
+
+# start the command batch
+batch start
+
+board_name SPEEDYBEEF405V3
+manufacturer_id SPBE
+
+# name: F405
+
+# feature
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+feature ESC_SENSOR
+
+# serial
+serial 5 2 115200 115200 0 115200
+
+# aux
+aux 0 0 0 1775 2100 0 0
+aux 1 1 2 900 1300 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 27 5 1800 2100 0 0
+aux 4 46 1 1800 2100 0 0
+aux 5 13 1 1300 1700 0 0
+aux 6 35 4 1800 2100 0 0
+
+# rxfail
+rxfail 3 s 1600
+rxfail 6 s 1000
+
+# master
+set acc_calibration = -12,-5,33,1
+set rc_smoothing_auto_factor = 250
+set rc_smoothing_setpoint_cutoff = 25
+set rc_smoothing_feedforward_cutoff = 25
+set failsafe_delay = 12
+set failsafe_throttle_low_delay = 300
+set failsafe_procedure = GPS-RESCUE
+set small_angle = 180
+set gps_sbas_mode = AUTO
+set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
+set gps_rescue_min_start_dist = 10
+set gps_rescue_alt_mode = CURRENT_ALT
+set gps_rescue_initial_climb = 15
+set gps_rescue_ascend_rate = 760
+set gps_rescue_ground_speed = 760
+set gps_rescue_descent_dist = 10
+set gps_rescue_throttle_hover = 1340
+set gps_rescue_min_sats = 6
+set gps_rescue_allow_arming_without_fix = ON
+set osd_units = IMPERIAL
+set osd_warn_bitmask = 335871
+set osd_alt_alarm = 150
+set osd_vbat_pos = 2453
+set osd_rssi_pos = 2459
+set osd_link_quality_pos = 376
+set osd_link_tx_power_pos = 2072
+set osd_rsnr_pos = 347
+set osd_tim_1_pos = 2080
+set osd_tim_2_pos = 2404
+set osd_remaining_time_estimate_pos = 298
+set osd_flymode_pos = 2125
+set osd_g_force_pos = 2163
+set osd_throttle_pos = 2182
+set osd_ah_pos = 2127
+set osd_current_pos = 2193
+set osd_mah_drawn_pos = 2437
+set osd_craft_name_pos = 2048
+set osd_gps_speed_pos = 2156
+set osd_gps_sats_pos = 2112
+set osd_home_dir_pos = 2094
+set osd_home_dist_pos = 2144
+set osd_compass_bar_pos = 2058
+set osd_altitude_pos = 18534
+set osd_power_pos = 217
+set osd_warnings_pos = 14602
+set osd_battery_usage_pos = 33109
+set osd_core_temp_pos = 2105
+set osd_total_flights_pos = 330
+set osd_stat_bitmask = 20286
+set osd_framerate_hz = 20
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set vcd_video_system = NTSC
+set craft_name = F405
+set pilot_name = DB
+
+profile 0
+
+# profile 0
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 9
+
+rateprofile 0
+
+# end the command batch
+batch end
+
+# 
