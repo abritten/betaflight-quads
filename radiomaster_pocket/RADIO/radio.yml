@@ -1,4 +1,4 @@
-checksum: 15104
+checksum: 16774
 manuallyEdited: 0
 timezoneMinutes: 0
 semver: 2.10.0
@@ -24,9 +24,9 @@ calib:
       mid: 1118
       spanNeg: 434
       spanPos: 435
-currModel: 4
+currModel: 2
 contrast: 15
-vBatWarn: 68
+vBatWarn: 56
 txVoltageCalibration: -6
 backlightMode: backlight_mode_all
 antennaMode: MODE_PER_MODEL
@@ -51,7 +51,7 @@ trainer:
          srcChn: 0
          mode: REPL
          studWeight: 100
-view: 3
+view: 2
 fai: 0
 beepMode: mode_all
 alarmsFlash: 0
@@ -73,11 +73,11 @@ beepLength: 1
 hapticStrength: 2
 gpsFormat: 0
 speakerPitch: 0
-speakerVolume: 22
-vBatMin: 66
+speakerVolume: 23
+vBatMin: 50
 vBatMax: 84
 backlightBright: 90
-globalTimer: 570452
+globalTimer: 738608
 bluetoothBaudrate: 0
 bluetoothMode: OFF
 countryCode: 0
@@ -122,9 +122,9 @@ switchConfig:
       name: ""
 backlightColor: 0
 bluetoothName: "73742Q-\x80"
-ownerRegistrationID: "CONSCEND"
-rotEncMode: 3
-uartSampleMode: -1
+ownerRegistrationID: "GM5"
+rotEncMode: 0
+uartSampleMode: 0
 audioMuteEnable: 0
 radioGFDisabled: 0
 radioTrainerDisabled: 0

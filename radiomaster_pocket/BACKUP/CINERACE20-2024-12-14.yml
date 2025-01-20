@@ -1,6 +1,6 @@
 semver: 2.10.0
 header: 
-   name: "LIFTOFF"
+   name: "CINERACE20"
 timers: 
    0:
       start: 0
@@ -166,21 +166,6 @@ mixData:
    speedUp: 0
    speedDown: 0
    name: "TurtLe"
- -
-   weight: 100
-   destCh: 9
-   srcRaw: P1
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: ADD
-   offset: 0
-   swtch: "NONE"
-   flightModes: 000000000
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "FAILSF"
 limitData: 
    0:
       min: 0
@@ -275,7 +260,7 @@ expoData:
    swtch: "NONE"
    flightModes: 000000000
    weight: 100
-   name: "SFAIL"
+   name: ""
    offset: 0
    curve: 
       type: 1
@@ -304,6 +289,10 @@ customFn:
       swtch: "SC0"
       func: PLAY_TRACK
       def: "fm-ang,1x"
+   2:
+      swtch: "SC1"
+      func: PLAY_TRACK
+      def: "fm-hor,1x"
    3:
       swtch: "SC2"
       func: PLAY_TRACK
@@ -315,7 +304,11 @@ customFn:
    5:
       swtch: "SE2"
       func: PLAY_TRACK
-      def: "rth,1x"
+      def: "turton,1x"
+   6:
+      swtch: "SB2"
+      func: PLAY_SOUND
+      def: "Sirn,1"
    7:
       swtch: "SD0"
       func: PLAY_SOUND
@@ -329,14 +322,24 @@ customFn:
       func: PLAY_TRACK
       def: "disarm,1x"
 thrTraceSrc: Thr
-switchWarningState: AuBuCuDuEu
+switchWarningState: AuBuCuDu
 rssiSource: none
 rfAlarms: 
    warning: 45
    critical: 42
 thrTrimSw: 0
-potsWarnMode: WARN_MANUAL
+potsWarnMode: WARN_OFF
 jitterFilter: GLOBAL
+moduleData: 
+   0:
+      type: TYPE_CROSSFIRE
+      subType: 0
+      channelsStart: 0
+      channelsCount: 16
+      failsafeMode: NOT_SET
+      mod: 
+         crsf: 
+            telemetryBaudrate: 0
 failsafeChannels: 
    0:
       val: 2
@@ -355,10 +358,7 @@ inputNames:
       val: "Thr"
    3:
       val: "Rud"
-potsWarnEnabled: 1
-potsWarnPosition: 
-   0:
-      val: -64
+potsWarnEnabled: 0
 telemetrySensors: 
    0:
       id1: 

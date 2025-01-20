@@ -166,6 +166,21 @@ mixData:
    speedUp: 0
    speedDown: 0
    name: "TurtLe"
+ -
+   weight: 100
+   destCh: 9
+   srcRaw: P1
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
 limitData: 
    0:
       min: 0
@@ -321,35 +336,6 @@ customFn:
       swtch: "SA0"
       func: PLAY_TRACK
       def: "disarm,1x"
-flightModeData: 
-   0:
-      trim: 
-         1:
-            value: 2
-            mode: 0
-      name: ""
-      swtch: "NONE"
-      fadeIn: 0
-      fadeOut: 0
-      gvars: 
-         0:
-            val: 0
-         1:
-            val: 0
-         2:
-            val: 0
-         3:
-            val: 0
-         4:
-            val: 0
-         5:
-            val: 0
-         6:
-            val: 0
-         7:
-            val: 0
-         8:
-            val: 0
 thrTraceSrc: Thr
 switchWarningState: AuBuCuDu
 rssiSource: none
