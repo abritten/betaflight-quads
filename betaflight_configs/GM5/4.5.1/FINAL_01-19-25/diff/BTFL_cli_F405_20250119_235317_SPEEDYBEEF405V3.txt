@@ -1,6 +1,4 @@
-# 
-
-# DIFF
+diff
 
 # version
 # Betaflight / STM32F405 (S405) 4.5.1 Dec  2 2024 / 01:15:09 (77d01ba3b) MSP API: 1.46
@@ -12,7 +10,7 @@ batch start
 board_name SPEEDYBEEF405V3
 manufacturer_id SPBE
 
-# name: F405
+# name: GM5
 
 # feature
 feature GPS
@@ -71,6 +69,7 @@ set failsafe_delay = 12
 set failsafe_throttle_low_delay = 300
 set failsafe_procedure = GPS-RESCUE
 set bat_capacity = 1550
+set force_battery_cell_count = 4
 set small_angle = 180
 set gps_sbas_mode = AUTO
 set gps_ublox_use_galileo = ON
@@ -87,6 +86,7 @@ set gps_rescue_allow_arming_without_fix = ON
 set ledstrip_brightness = 60
 set osd_units = IMPERIAL
 set osd_warn_bitmask = 335871
+set osd_cap_alarm = 1550
 set osd_alt_alarm = 150
 set osd_vbat_pos = 2453
 set osd_rssi_pos = 2459
@@ -99,11 +99,11 @@ set osd_remaining_time_estimate_pos = 298
 set osd_flymode_pos = 2125
 set osd_g_force_pos = 2163
 set osd_throttle_pos = 2182
-set osd_ah_pos = 2127
+set osd_ah_pos = 2191
 set osd_current_pos = 2193
 set osd_mah_drawn_pos = 2437
 set osd_craft_name_pos = 2048
-set osd_gps_speed_pos = 2156
+set osd_gps_speed_pos = 2188
 set osd_gps_sats_pos = 2112
 set osd_home_dir_pos = 2094
 set osd_home_dist_pos = 2144
@@ -119,7 +119,7 @@ set osd_framerate_hz = 20
 set osd_canvas_width = 30
 set osd_canvas_height = 13
 set vcd_video_system = NTSC
-set craft_name = F405
+set craft_name = GM5
 set pilot_name = DB
 
 profile 0
