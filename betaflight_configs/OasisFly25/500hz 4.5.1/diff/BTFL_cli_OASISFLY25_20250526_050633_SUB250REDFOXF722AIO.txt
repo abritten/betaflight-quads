@@ -1,0 +1,128 @@
+diff
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.5.1 Dec 20 2024 / 21:52:19 (77d01ba3b) MSP API: 1.46
+# config rev: 16ac022
+
+# start the command batch
+batch start
+
+board_name SUB250REDFOXF722AIO
+manufacturer_id SU25
+
+# name: OasisFly25
+
+# feature
+feature TELEMETRY
+feature OSD
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
+
+# beeper
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 2 900 1200 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 27 5 1800 2100 0 0
+aux 4 13 1 1300 1700 0 0
+aux 5 35 4 1800 2100 0 0
+
+# master
+set gyro_lpf1_static_hz = 325
+set gyro_lpf2_static_hz = 650
+set gyro_to_use = FIRST
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 325
+set gyro_lpf1_dyn_max_hz = 650
+set acc_calibration = -13,-38,-31,1
+set rc_smoothing_auto_factor = 250
+set rc_smoothing_setpoint_cutoff = 25
+set rc_smoothing_feedforward_cutoff = 25
+set dshot_bidir = ON
+set motor_poles = 12
+set align_board_yaw = -135
+set force_battery_cell_count = 4
+set yaw_motors_reversed = ON
+set small_angle = 180
+set simplified_gyro_filter_multiplier = 130
+set osd_units = IMPERIAL
+set osd_warn_bitmask = 335871
+set osd_cap_alarm = 700
+set osd_alt_alarm = 150
+set osd_tim1 = 2561
+set osd_tim2 = 2563
+set osd_vbat_pos = 3585
+set osd_rssi_pos = 3592
+set osd_tim_1_pos = 2543
+set osd_tim_2_pos = 2080
+set osd_flymode_pos = 2169
+set osd_g_force_pos = 2207
+set osd_throttle_pos = 2226
+set osd_ah_pos = 2234
+set osd_current_pos = 2237
+set osd_mah_drawn_pos = 2575
+set osd_craft_name_pos = 2048
+set osd_compass_bar_pos = 2070
+set osd_altitude_pos = 18578
+set osd_warnings_pos = 14709
+set osd_core_temp_pos = 3087
+set osd_stat_bitmask = 2129710
+set osd_framerate_hz = 20
+set debug_mode = GYRO_SCALED
+set gyro_1_sensor_align = DEFAULT
+set craft_name = OasisFly25
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 67
+set dterm_lpf1_dyn_max_hz = 135
+set dterm_lpf1_type = BIQUAD
+set dterm_lpf1_static_hz = 67
+set dterm_lpf2_static_hz = 0
+set anti_gravity_gain = 100
+set p_pitch = 54
+set i_pitch = 106
+set d_pitch = 55
+set f_pitch = 115
+set p_roll = 37
+set i_roll = 72
+set d_roll = 37
+set f_roll = 79
+set p_yaw = 37
+set i_yaw = 72
+set f_yaw = 79
+set angle_p_gain = 80
+set angle_limit = 55
+set horizon_level_strength = 50
+set d_min_roll = 36
+set d_min_pitch = 53
+set thrust_linear = 30
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 9
+set feedforward_max_rate_limit = 80
+set dyn_idle_min_rpm = 55
+set simplified_master_multiplier = 110
+set simplified_i_gain = 110
+set simplified_d_gain = 110
+set simplified_pi_gain = 75
+set simplified_dmax_gain = 10
+set simplified_feedforward_gain = 60
+set simplified_pitch_d_gain = 130
+set simplified_pitch_pi_gain = 140
+set simplified_dterm_filter_multiplier = 90
+set tpa_rate = 40
+
+rateprofile 1
+
+# end the command batch
+batch end
+
+# 
