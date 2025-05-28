@@ -1,0 +1,2 @@
+5/27/25
+This is a copy of 4.4.3 initial setup but with 500hz configured preset.

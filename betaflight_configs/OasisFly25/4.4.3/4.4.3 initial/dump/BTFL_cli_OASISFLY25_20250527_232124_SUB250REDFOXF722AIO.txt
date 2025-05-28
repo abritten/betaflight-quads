@@ -1,9 +1,10 @@
 dump
-###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.4.3 Nov 23 2023 / 05:55:17 (738127e7e) MSP API: 1.45
-###ERROR IN dump: NO CONFIG FOUND###
+# Betaflight / STM32F7X2 (S7X2) 4.4.3 Apr 26 2025 / 17:22:27 (738127e7e) MSP API: 1.45
+
+# config: YES
+
 # start the command batch
 batch start
 
@@ -83,7 +84,6 @@ resource PINIO 3 NONE
 resource PINIO 4 NONE
 resource USB_MSC_PIN 1 NONE
 resource FLASH_CS 1 A15
-resource OSD_CS 1 B12
 resource GYRO_EXTI 1 C04
 resource GYRO_EXTI 2 B10
 resource GYRO_CS 1 A04
@@ -226,8 +226,8 @@ beeper DISARMING
 beeper ARMING
 beeper ARMING_GPS_FIX
 beeper ARMING_GPS_NO_FIX
-beeper BAT_CRIT_LOW
-beeper BAT_LOW
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
 beeper GPS_STATUS
 beeper RX_SET
 beeper ACC_CALIBRATION
@@ -245,8 +245,8 @@ beeper CAM_CONNECTION_CLOSE
 beeper RC_SMOOTHING_INIT_FAIL
 
 # beacon
-beacon RX_LOST
-beacon RX_SET
+beacon -RX_LOST
+beacon -RX_SET
 
 # map
 map AETR1234
@@ -354,12 +354,12 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 1700 2100 0 0
-aux 1 1 1 900 1300 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
+aux 0 0 0 1800 2100 0 0
+aux 1 1 2 900 1300 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 27 5 1900 2100 0 0
+aux 4 13 1 1300 1700 0 0
+aux 5 35 4 1800 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -481,7 +481,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -32,5,-24,1
+set acc_calibration = -14,-38,-29,1
 set baro_bustype = I2C
 set baro_spi_device = 0
 set baro_i2c_device = 1
@@ -498,17 +498,16 @@ set rssi_invert = OFF
 set rssi_src_frame_lpf_period = 30
 set rssi_smoothing = 125
 set rc_smoothing = ON
-set rc_smoothing_auto_factor = 250
+set rc_smoothing_auto_factor = 30
 set rc_smoothing_auto_factor_throttle = 30
-set rc_smoothing_setpoint_cutoff = 25
-set rc_smoothing_feedforward_cutoff = 25
+set rc_smoothing_setpoint_cutoff = 0
+set rc_smoothing_feedforward_cutoff = 0
 set rc_smoothing_throttle_cutoff = 0
 set rc_smoothing_debug_axis = ROLL
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
 set serialrx_provider = CRSF
 set serialrx_inverted = OFF
-set sbus_baud_fast = OFF
 set crsf_use_negotiated_baud = OFF
 set airmode_start_throttle_percent = 25
 set rx_min_usec = 885
@@ -575,7 +574,7 @@ set use_vbat_alerts = ON
 set use_cbat_alerts = OFF
 set cbat_alert_percent = 10
 set vbat_cutoff_percent = 100
-set force_battery_cell_count = 0
+set force_battery_cell_count = 4
 set vbat_display_lpf_period = 30
 set vbat_sag_lpf_period = 2
 set ibat_lpf_period = 10
@@ -692,13 +691,13 @@ set ledstrip_beacon_percent = 50
 set ledstrip_beacon_armed_only = OFF
 set ledstrip_brightness = 100
 set osd_units = IMPERIAL
-set osd_warn_bitmask = 8191
+set osd_warn_bitmask = 73727
 set osd_rssi_alarm = 20
 set osd_link_quality_alarm = 80
 set osd_rssi_dbm_alarm = -60
 set osd_rsnr_alarm = 4
-set osd_cap_alarm = 2200
-set osd_alt_alarm = 100
+set osd_cap_alarm = 700
+set osd_alt_alarm = 150
 set osd_distance_alarm = 0
 set osd_esc_temp_alarm = 0
 set osd_esc_rpm_alarm = -1
@@ -710,26 +709,26 @@ set osd_ah_invert = OFF
 set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2561
-set osd_tim2 = 2563
-set osd_vbat_pos = 3524
-set osd_rssi_pos = 3530
+set osd_tim2 = 2560
+set osd_vbat_pos = 3555
+set osd_rssi_pos = 3561
 set osd_link_quality_pos = 234
 set osd_link_tx_power_pos = 234
 set osd_rssi_dbm_pos = 234
 set osd_rsnr_pos = 234
-set osd_tim_1_pos = 2476
+set osd_tim_1_pos = 2537
 set osd_tim_2_pos = 2080
 set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 2169
 set osd_anti_gravity_pos = 234
-set osd_g_force_pos = 2206
-set osd_throttle_pos = 2230
+set osd_g_force_pos = 2205
+set osd_throttle_pos = 2228
 set osd_vtx_channel_pos = 234
 set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 206
-set osd_ah_pos = 2234
-set osd_current_pos = 2236
-set osd_mah_drawn_pos = 2508
+set osd_ah_pos = 2266
+set osd_current_pos = 2235
+set osd_mah_drawn_pos = 2570
 set osd_wh_drawn_pos = 234
 set osd_motor_diag_pos = 234
 set osd_craft_name_pos = 2048
@@ -742,14 +741,14 @@ set osd_home_dir_pos = 234
 set osd_home_dist_pos = 234
 set osd_flight_dist_pos = 234
 set osd_compass_bar_pos = 2070
-set osd_altitude_pos = 18581
+set osd_altitude_pos = 18580
 set osd_pid_roll_pos = 234
 set osd_pid_pitch_pos = 234
 set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 14677
+set osd_warnings_pos = 14709
 set osd_avg_cell_voltage_pos = 544
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
@@ -764,7 +763,7 @@ set osd_esc_rpm_freq_pos = 234
 set osd_rtc_date_time_pos = 234
 set osd_adjustment_range_pos = 234
 set osd_flip_arrow_pos = 234
-set osd_core_temp_pos = 3086
+set osd_core_temp_pos = 3087
 set osd_log_status_pos = 234
 set osd_stick_overlay_left_pos = 234
 set osd_stick_overlay_right_pos = 234
@@ -788,7 +787,7 @@ set osd_sys_vtx_dvr_pos = 234
 set osd_sys_warnings_pos = 234
 set osd_sys_vtx_temp_pos = 234
 set osd_sys_fan_speed_pos = 234
-set osd_stat_bitmask = 14124
+set osd_stat_bitmask = 32558
 set osd_profile = 1
 set osd_profile_1_name = -
 set osd_profile_2_name = -
@@ -799,7 +798,7 @@ set osd_rcchannels = -1,-1,-1,-1
 set osd_camera_frame_width = 24
 set osd_camera_frame_height = 11
 set osd_stat_avg_cell_value = OFF
-set osd_framerate_hz = 12
+set osd_framerate_hz = 60
 set osd_menu_background = TRANSPARENT
 set osd_aux_channel = 1
 set osd_aux_scale = 200
@@ -822,20 +821,10 @@ set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
-set vcd_h_offset = 0
-set vcd_v_offset = 0
-set max7456_clock = NOMINAL
-set max7456_spi_bus = 2
-set max7456_preinit_opu = OFF
 set displayport_msp_col_adjust = 0
 set displayport_msp_row_adjust = 0
 set displayport_msp_fonts = 0,0,0,0
 set displayport_msp_use_device_blink = OFF
-set displayport_max7456_col_adjust = 0
-set displayport_max7456_row_adjust = 0
-set displayport_max7456_inv = OFF
-set displayport_max7456_blk = 0
-set displayport_max7456_wht = 2
 set esc_sensor_halfduplex = OFF
 set esc_sensor_current_offset = 0
 set led_inversion = 0
@@ -976,8 +965,8 @@ set transient_throttle_limit = 0
 set feedforward_transition = 0
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 9
-set feedforward_boost = 15
+set feedforward_jitter_factor = 7
+set feedforward_boost = 17
 set feedforward_max_rate_limit = 80
 set dyn_idle_min_rpm = 55
 set dyn_idle_p_gain = 50
