@@ -1,7 +1,25 @@
 # betaflight-quads
 betaflight settings for quads.
 
+
+**OasisFly25**
+
+![Oasisfly25](./betaflight_configs/OasisFly25/pictures/1.jpeg)
+
+- OP Pro + ELRS Bind and fly.
+- M10 SUB250 GPS. 
+- Added 220uF low ESR capacitor.
+- Ziptied battery input cable.
+- VIFLY Finder V2 Buzzer with battery seperated.
+- 3D printed custom GPS tail mount.
+
+
+
+
 **GM5**
+
+![Oasisfly25](./betaflight_configs/GM5/pictures/1.jpeg)
+
 - Speedybee F405V3 F55A
 - Emix 5 inch S4
 - XING 2207 1800KV
@@ -13,8 +31,17 @@ betaflight settings for quads.
 - SEQURE M10-18 GPS
 - FPV Drone 220mm Frame 5 inch Carbon Fiber 
 
+
+
+
+
 **Flywoo Cinerace20**
+
+![Oasisfly25](./betaflight_configs/Cinerace20/pictures/1.jpeg)
+
 - Bind and fly.
+
+
 
 
 # radio transmitters
