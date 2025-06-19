@@ -1,16 +1,16 @@
 semver: 2.10.0
 header: 
-   name: "CONSCENDO"
+   name: "LIFTOFF"
 timers: 
    0:
       start: 0
       swtch: "SA2"
       value: -642
-      mode: THR
+      mode: OFF
       countdownBeep: 0
       minuteBeep: 1
       persistent: 0
-      countdownStart: -2
+      countdownStart: -1
       showElapsed: 1
       extraHaptic: 0
       name: ""
@@ -41,9 +41,6 @@ mixData:
    offset: 0
    swtch: "NONE"
    flightModes: 000000000
-   curve: 
-      type: 1
-      value: 10
    delayUp: 0
    delayDown: 0
    speedUp: 0
@@ -59,9 +56,6 @@ mixData:
    offset: 0
    swtch: "NONE"
    flightModes: 000000000
-   curve: 
-      type: 1
-      value: 10
    delayUp: 0
    delayDown: 0
    speedUp: 0
@@ -75,34 +69,13 @@ mixData:
    mixWarn: 0
    mltpx: ADD
    offset: 0
-   swtch: "L2"
+   swtch: "NONE"
    flightModes: 000000000
-   curve: 
-      type: 1
-      value: 50
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
    name: ""
- -
-   weight: 100
-   destCh: 2
-   srcRaw: I2
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: ADD
-   offset: 0
-   swtch: "!L2"
-   flightModes: 000000000
-   curve: 
-      type: 3
-      value: 1
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "T-CUT"
  -
    weight: 100
    destCh: 3
@@ -121,6 +94,36 @@ mixData:
  -
    weight: 100
    destCh: 4
+   srcRaw: SA
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 5
+   srcRaw: SB
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 6
    srcRaw: SC
    carryTrim: 0
    mixWarn: 0
@@ -132,25 +135,10 @@ mixData:
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: "SAFE"
+   name: ""
  -
    weight: 100
-   destCh: 5
-   srcRaw: SB
-   carryTrim: 0
-   mixWarn: 2
-   mltpx: ADD
-   offset: 0
-   swtch: "SB2"
-   flightModes: 000000000
-   delayUp: 0
-   delayDown: 0
-   speedUp: 20
-   speedDown: 10
-   name: "FLAPS"
- -
-   weight: 100
-   destCh: 6
+   destCh: 7
    srcRaw: SD
    carryTrim: 0
    mixWarn: 0
@@ -162,7 +150,37 @@ mixData:
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: "LIGHTS"
+   name: ""
+ -
+   weight: 100
+   destCh: 8
+   srcRaw: SE
+   carryTrim: 0
+   mixWarn: 2
+   mltpx: ADD
+   offset: 0
+   swtch: "SE2"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "TurtLe"
+ -
+   weight: 100
+   destCh: 9
+   srcRaw: P1
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "FAILSF"
 limitData: 
    0:
       min: 0
@@ -170,7 +188,7 @@ limitData:
       ppmCenter: 0
       offset: 0
       symetrical: 0
-      revert: 1
+      revert: 0
       curve: 32
       name: ""
    1:
@@ -188,17 +206,8 @@ limitData:
       ppmCenter: 0
       offset: 0
       symetrical: 0
-      revert: 1
+      revert: 0
       curve: 32
-      name: ""
-   4:
-      min: 0
-      max: 0
-      ppmCenter: 490
-      offset: 0
-      symetrical: 0
-      revert: 1
-      curve: 0
       name: ""
 expoData: 
  -
@@ -238,8 +247,11 @@ expoData:
    swtch: "NONE"
    flightModes: 000000000
    weight: 100
-   name: ""
+   name: "EXPO50"
    offset: 0
+   curve: 
+      type: 1
+      value: 50
  -
    mode: 3
    scale: 0
@@ -254,53 +266,35 @@ expoData:
    curve: 
       type: 1
       value: 0
+ -
+   mode: 3
+   scale: 0
+   trimSource: 0
+   srcRaw: P1
+   chn: 4
+   swtch: "NONE"
+   flightModes: 000000000
+   weight: 100
+   name: "SFAIL"
+   offset: 0
+   curve: 
+      type: 1
+      value: 0
 curves: 
-   0:
-      type: 0
-      smooth: 0
-      points: -3
-      name: "CUT"
    31:
       type: 1
       smooth: 0
       points: -1
       name: "CNT"
 points: 
-   0:
-      val: -100
-   1:
-      val: -100
-   152:
-      val: -100
-   153:
-      val: -32
-   154:
-      val: 32
    155:
+      val: -100
+   158:
       val: 100
-   156:
-      val: -33
-   157:
-      val: 33
-logicalSw: 
-   0:
-      func: FUNC_VNEG
-      def: "I2,-98"
-      andsw: "NONE"
-      delay: 0
-      duration: 0
-   1:
-      func: FUNC_OR
-      def: "L1,L2"
-      andsw: "SA2"
-      delay: 2
-      duration: 0
-   2:
-      func: FUNC_AND
-      def: "NONE,NONE"
-      andsw: "SE2"
-      delay: 20
-      duration: 0
+   159:
+      val: -2
+   160:
+      val: 2
 customFn: 
    0:
       swtch: "SA2"
@@ -310,10 +304,6 @@ customFn:
       swtch: "SC0"
       func: PLAY_TRACK
       def: "fm-ang,1x"
-   2:
-      swtch: "SB0"
-      func: PLAY_TRACK
-      def: "normal,1x"
    3:
       swtch: "SC2"
       func: PLAY_TRACK
@@ -323,50 +313,34 @@ customFn:
       func: PLAY_TRACK
       def: "lghton,1x"
    5:
-      swtch: "L3"
-      func: RESET
-      def: "Tmr1,1"
-   6:
-      swtch: "L3"
+      swtch: "SE2"
       func: PLAY_TRACK
-      def: "timrs1,1"
+      def: "rth,1x"
+   6:
+      swtch: "SB2"
+      func: PLAY_SOUND
+      def: "Bp3,1x"
    7:
       swtch: "SD0"
       func: PLAY_SOUND
       def: "Chrp,1x"
    8:
-      swtch: "SB2"
-      func: PLAY_TRACK
-      def: "flapdn,3"
+      swtch: "SB0"
+      func: PLAY_SOUND
+      def: "Chrp,1x"
    9:
       swtch: "SA0"
       func: PLAY_TRACK
-      def: "thrcut,1x"
+      def: "disarm,1x"
 thrTraceSrc: Thr
-switchWarningState: AuBuCuDu
+switchWarningState: AuBuCuDuEu
 rssiSource: none
 rfAlarms: 
    warning: 45
    critical: 42
 thrTrimSw: 0
-potsWarnMode: WARN_OFF
+potsWarnMode: WARN_MANUAL
 jitterFilter: GLOBAL
-moduleData: 
-   1:
-      type: TYPE_MULTIMODULE
-      subType: 6,0
-      channelsStart: 0
-      channelsCount: 12
-      failsafeMode: NOT_SET
-      mod: 
-         multi: 
-            disableTelemetry: 0
-            disableMapping: 0
-            autoBindMode: 1
-            lowPowerMode: 0
-            receiverTelemetryOff: 0
-            receiverHigherChannels: 0
-            optionValue: 0
 failsafeChannels: 
    0:
       val: 2
@@ -385,7 +359,10 @@ inputNames:
       val: "Thr"
    3:
       val: "Rud"
-potsWarnEnabled: 0
+potsWarnEnabled: 1
+potsWarnPosition: 
+   0:
+      val: -64
 telemetrySensors: 
    0:
       id1: 
