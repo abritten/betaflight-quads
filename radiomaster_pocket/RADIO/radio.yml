@@ -1,4 +1,4 @@
-checksum: 1315
+checksum: 25183
 manuallyEdited: 0
 timezoneMinutes: 0
 semver: 2.10.0
@@ -24,7 +24,7 @@ calib:
       mid: 1118
       spanNeg: 434
       spanPos: 435
-currModel: 4
+currModel: 6
 contrast: 15
 vBatWarn: 56
 txVoltageCalibration: -6
@@ -77,7 +77,7 @@ speakerVolume: 2
 vBatMin: 50
 vBatMax: 84
 backlightBright: 95
-globalTimer: 1076417
+globalTimer: 1107959
 bluetoothBaudrate: 0
 bluetoothMode: OFF
 countryCode: 0
@@ -122,17 +122,17 @@ switchConfig:
       name: ""
 backlightColor: 0
 bluetoothName: "73742Q-\x80"
-ownerRegistrationID: "LIFTOFF"
-rotEncMode: 0
-uartSampleMode: 0
+ownerRegistrationID: "ZOHD ALT"
+rotEncMode: 1
+uartSampleMode: 1
 audioMuteEnable: 0
-radioGFDisabled: 0
-radioTrainerDisabled: 0
+radioGFDisabled: 1
+radioTrainerDisabled: 1
 modelHeliDisabled: 0
 modelFMDisabled: 0
-modelCurvesDisabled: 0
+modelCurvesDisabled: 1
 modelGVDisabled: 0
-modelLSDisabled: 0
+modelLSDisabled: 1
 modelSFDisabled: 0
 modelCustomScriptsDisabled: 0
 modelTelemetryDisabled: 0
