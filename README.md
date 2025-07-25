@@ -1,6 +1,7 @@
 # betaflight-quads
 betaflight settings for quads.
 
+---
 
 **OasisFly25**
 
@@ -14,7 +15,7 @@ betaflight settings for quads.
 - 3D printed custom GPS tail mount.
 
 
-
+---
 
 **GM5**
 
@@ -32,7 +33,7 @@ betaflight settings for quads.
 - FPV Drone 220mm Frame 5 inch Carbon Fiber 
 
 
-
+---
 
 
 **Flywoo Cinerace20**
@@ -41,8 +42,16 @@ betaflight settings for quads.
 
 - Bind and fly.
 
+---
 
+**BetaFPV Pav20 Pro**
 
+![Pav20 Pro](./betaflight_configs/Pavo20Pro/resources/1.jpeg)
+
+- [Bind and fly](https://betafpv.com/products/f4-2-3s-20a-aio-fc-v1)
+- HGLRC M100 GPS mini
+
+---
 
 # radio transmitters
 Settings for transmitters.

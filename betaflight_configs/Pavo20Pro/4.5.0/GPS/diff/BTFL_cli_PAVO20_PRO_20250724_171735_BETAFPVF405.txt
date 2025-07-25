@@ -1,0 +1,177 @@
+# 
+
+# diff
+
+# version
+# Betaflight / STM32F405 (S405) 4.5.0 Jun 28 2024 / 17:33:05 (c155f5830) MSP API: 1.46
+# config rev: 617fd37
+
+# start the command batch
+batch start
+
+board_name BETAFPVF405
+manufacturer_id BEFH
+
+# name: Pavo20 Pro
+
+# resources
+resource SERIAL_TX 6 NONE
+resource PINIO 1 C06
+
+# feature
+feature GPS
+feature LED_STRIP
+feature OSD
+
+# serial
+serial 0 2 115200 115200 0 115200
+serial 2 64 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
+
+# beeper
+beeper -BAT_LOW
+
+# led
+led 0 0,0::C:10
+led 1 1,0::C:10
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 2 900 1300 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 27 5 1900 2100 0 0
+aux 4 46 1 1800 2100 0 0
+aux 5 13 1 1200 2100 0 0
+aux 6 35 4 1800 2100 0 0
+aux 7 40 3 1800 2100 0 0
+
+# rxfail
+rxfail 3 s 1600
+rxfail 6 s 1000
+rxfail 7 s 2000
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 550
+set dyn_notch_count = 1
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 250
+set dyn_notch_max_hz = 500
+set gyro_lpf1_dyn_min_hz = 0
+set acc_calibration = -33,13,-11,1
+set baro_hardware = AUTO
+set max_check = 2000
+set rc_smoothing_auto_factor = 250
+set rc_smoothing_auto_factor_throttle = 250
+set rc_smoothing_setpoint_cutoff = 12
+set rc_smoothing_feedforward_cutoff = 12
+set rc_smoothing_throttle_cutoff = 20
+set dshot_idle_value = 1000
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set motor_output_reordering = 2,3,0,1,4,5,6,7
+set failsafe_delay = 10
+set failsafe_throttle_low_delay = 300
+set failsafe_procedure = GPS-RESCUE
+set align_board_roll = 180
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 340
+set ibata_scale = 510
+set ibata_offset = -300
+set small_angle = 180
+set gps_sbas_mode = AUTO
+set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
+set gps_rescue_min_start_dist = 10
+set gps_rescue_alt_mode = CURRENT_ALT
+set gps_rescue_ascend_rate = 760
+set gps_rescue_ground_speed = 760
+set gps_rescue_descent_dist = 10
+set gps_rescue_throttle_hover = 1296
+set gps_rescue_min_sats = 6
+set gps_rescue_allow_arming_without_fix = ON
+set pid_process_denom = 2
+set simplified_gyro_filter_multiplier = 110
+set osd_units = IMPERIAL
+set osd_warn_bitmask = 335871
+set osd_rssi_dbm_alarm = -100
+set osd_cap_alarm = 400
+set osd_alt_alarm = 150
+set osd_tim1 = 2563
+set osd_tim2 = 2562
+set osd_vbat_pos = 3694
+set osd_rssi_pos = 3690
+set osd_link_quality_pos = 448
+set osd_link_tx_power_pos = 3087
+set osd_rssi_dbm_pos = 416
+set osd_rsnr_pos = 160
+set osd_tim_1_pos = 2567
+set osd_tim_2_pos = 2080
+set osd_flymode_pos = 2201
+set osd_g_force_pos = 3200
+set osd_throttle_pos = 2226
+set osd_crosshairs_pos = 307
+set osd_ah_pos = 2234
+set osd_current_pos = 2238
+set osd_mah_drawn_pos = 2598
+set osd_craft_name_pos = 2048
+set osd_gps_speed_pos = 2233
+set osd_gps_sats_pos = 2112
+set osd_home_dir_pos = 2170
+set osd_home_dist_pos = 2144
+set osd_compass_bar_pos = 2071
+set osd_altitude_pos = 18578
+set osd_warnings_pos = 14677
+set osd_esc_tmp_pos = 129
+set osd_core_temp_pos = 225
+set debug_mode = GYRO_SCALED
+set pinio_box = 40,255,255,255
+set craft_name = Pavo20 Pro
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 86
+set dterm_lpf1_dyn_max_hz = 172
+set dterm_lpf1_static_hz = 86
+set dterm_lpf2_static_hz = 172
+set anti_gravity_gain = 40
+set p_pitch = 68
+set i_pitch = 139
+set d_pitch = 60
+set f_pitch = 0
+set p_roll = 54
+set i_roll = 111
+set d_roll = 44
+set f_roll = 0
+set p_yaw = 54
+set i_yaw = 111
+set f_yaw = 0
+set d_min_roll = 44
+set d_min_pitch = 60
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 70
+set feedforward_jitter_factor = 11
+set simplified_master_multiplier = 115
+set simplified_i_gain = 115
+set simplified_d_gain = 130
+set simplified_pi_gain = 105
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 0
+set simplified_pitch_d_gain = 120
+set simplified_pitch_pi_gain = 120
+set simplified_dterm_filter_multiplier = 115
+set tpa_rate = 60
+set tpa_breakpoint = 1250
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 65
+set thr_expo = 20
+
+# end the command batch
+batch end
+
+# 
