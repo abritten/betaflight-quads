@@ -281,8 +281,8 @@ beeper DISARMING
 beeper ARMING
 beeper ARMING_GPS_FIX
 beeper ARMING_GPS_NO_FIX
-beeper BAT_CRIT_LOW
-beeper BAT_LOW
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
 beeper GPS_STATUS
 beeper RX_SET
 beeper ACC_CALIBRATION
@@ -409,13 +409,13 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 1700 2100 0 0
-aux 1 1 1 900 1175 0 0
-aux 2 13 2 1575 2100 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
-aux 6 0 0 900 900 0 0
+aux 0 0 0 1800 2100 0 0
+aux 1 1 2 900 1200 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 27 5 1800 2100 0 0
+aux 4 46 1 1800 2100 0 0
+aux 5 13 1 1300 1700 0 0
+aux 6 35 4 1800 2100 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
 aux 9 0 0 900 900 0 0
@@ -491,10 +491,10 @@ vtx 9 0 0 0 0 900 900
 rxfail 0 a
 rxfail 1 a
 rxfail 2 a
-rxfail 3 a
+rxfail 3 s 1500
 rxfail 4 h
 rxfail 5 h
-rxfail 6 h
+rxfail 6 s 1000
 rxfail 7 h
 rxfail 8 h
 rxfail 9 h
@@ -536,7 +536,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -16,8,4,1
+set acc_calibration = -12,10,-2,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -621,11 +621,11 @@ set motor_poles = 14
 set motor_output_reordering = 2,3,0,1,4,5,6,7
 set thr_corr_value = 0
 set thr_corr_angle = 800
-set failsafe_delay = 15
+set failsafe_delay = 12
 set failsafe_off_delay = 10
 set failsafe_throttle = 1000
 set failsafe_switch_mode = STAGE1
-set failsafe_throttle_low_delay = 100
+set failsafe_throttle_low_delay = 300
 set failsafe_procedure = GPS-RESCUE
 set failsafe_recovery_delay = 5
 set failsafe_stick_threshold = 30
@@ -645,7 +645,7 @@ set use_vbat_alerts = ON
 set use_cbat_alerts = OFF
 set cbat_alert_percent = 10
 set vbat_cutoff_percent = 100
-set force_battery_cell_count = 0
+set force_battery_cell_count = 6
 set vbat_display_lpf_period = 30
 set vbat_sag_lpf_period = 2
 set ibat_lpf_period = 10
@@ -695,26 +695,26 @@ set gps_set_home_point_once = ON
 set gps_use_3d_speed = OFF
 set gps_sbas_integrity = OFF
 set gps_nmea_custom_commands = -
-set gps_rescue_min_start_dist = 15
-set gps_rescue_alt_mode = MAX_ALT
+set gps_rescue_min_start_dist = 10
+set gps_rescue_alt_mode = CURRENT_ALT
 set gps_rescue_initial_climb = 15
-set gps_rescue_ascend_rate = 750
+set gps_rescue_ascend_rate = 760
 set gps_rescue_return_alt = 30
-set gps_rescue_ground_speed = 750
+set gps_rescue_ground_speed = 760
 set gps_rescue_max_angle = 45
 set gps_rescue_roll_mix = 150
 set gps_rescue_pitch_cutoff = 75
 set gps_rescue_imu_yaw_gain = 10
-set gps_rescue_descent_dist = 20
+set gps_rescue_descent_dist = 10
 set gps_rescue_descend_rate = 150
 set gps_rescue_landing_alt = 4
 set gps_rescue_disarm_threshold = 20
 set gps_rescue_throttle_min = 1100
 set gps_rescue_throttle_max = 1700
-set gps_rescue_throttle_hover = 1275
+set gps_rescue_throttle_hover = 1280
 set gps_rescue_sanity_checks = RESCUE_SANITY_FS_ONLY
-set gps_rescue_min_sats = 8
-set gps_rescue_allow_arming_without_fix = OFF
+set gps_rescue_min_sats = 6
+set gps_rescue_allow_arming_without_fix = ON
 set gps_rescue_throttle_p = 15
 set gps_rescue_throttle_i = 15
 set gps_rescue_throttle_d = 20
@@ -777,7 +777,7 @@ set sdio_clk_bypass = OFF
 set sdio_use_cache = OFF
 set sdio_use_4bit_width = OFF
 set sdio_device = 0
-set osd_units = METRIC
+set osd_units = IMPERIAL
 set osd_warn_bitmask = 270335
 set osd_rssi_alarm = 20
 set osd_link_quality_alarm = 80
@@ -797,46 +797,46 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 341
-set osd_rssi_pos = 341
-set osd_link_quality_pos = 3532
-set osd_link_tx_power_pos = 341
-set osd_rssi_dbm_pos = 3500
+set osd_vbat_pos = 3586
+set osd_rssi_pos = 3593
+set osd_link_quality_pos = 1484
+set osd_link_tx_power_pos = 3087
+set osd_rssi_dbm_pos = 1452
 set osd_rsnr_pos = 341
-set osd_tim_1_pos = 341
-set osd_tim_2_pos = 2498
+set osd_tim_1_pos = 2080
+set osd_tim_2_pos = 2539
 set osd_remaining_time_estimate_pos = 341
-set osd_flymode_pos = 2105
+set osd_flymode_pos = 2169
 set osd_anti_gravity_pos = 341
-set osd_g_force_pos = 341
-set osd_throttle_pos = 2137
+set osd_g_force_pos = 3200
+set osd_throttle_pos = 2224
 set osd_vtx_channel_pos = 341
 set osd_crosshairs_pos = 312
 set osd_ah_sbar_pos = 313
-set osd_ah_pos = 185
-set osd_current_pos = 341
-set osd_mah_drawn_pos = 341
+set osd_ah_pos = 2234
+set osd_current_pos = 2238
+set osd_mah_drawn_pos = 2572
 set osd_wh_drawn_pos = 341
 set osd_motor_diag_pos = 341
-set osd_craft_name_pos = 2614
+set osd_craft_name_pos = 2048
 set osd_pilot_name_pos = 341
-set osd_gps_speed_pos = 341
+set osd_gps_speed_pos = 2232
 set osd_gps_lon_pos = 341
 set osd_gps_lat_pos = 341
-set osd_gps_sats_pos = 2210
-set osd_home_dir_pos = 2394
-set osd_home_dist_pos = 2178
+set osd_gps_sats_pos = 2112
+set osd_home_dir_pos = 2138
+set osd_home_dist_pos = 2144
 set osd_flight_dist_pos = 341
-set osd_compass_bar_pos = 341
-set osd_altitude_pos = 2146
+set osd_compass_bar_pos = 2070
+set osd_altitude_pos = 2192
 set osd_pid_roll_pos = 341
 set osd_pid_pitch_pos = 341
 set osd_pid_yaw_pos = 341
 set osd_debug_pos = 364
 set osd_power_pos = 341
 set osd_pidrate_profile_pos = 341
-set osd_warnings_pos = 14772
-set osd_avg_cell_voltage_pos = 2466
+set osd_warnings_pos = 14741
+set osd_avg_cell_voltage_pos = 1536
 set osd_pit_ang_pos = 341
 set osd_rol_ang_pos = 341
 set osd_battery_usage_pos = 341
@@ -851,7 +851,7 @@ set osd_esc_rpm_freq_pos = 341
 set osd_rtc_date_time_pos = 341
 set osd_adjustment_range_pos = 341
 set osd_flip_arrow_pos = 341
-set osd_core_temp_pos = 341
+set osd_core_temp_pos = 3120
 set osd_log_status_pos = 341
 set osd_stick_overlay_left_pos = 341
 set osd_stick_overlay_right_pos = 341
