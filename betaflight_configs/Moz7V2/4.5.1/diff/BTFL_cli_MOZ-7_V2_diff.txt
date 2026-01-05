@@ -21,22 +21,19 @@ feature OSD
 serial 5 2 115200 115200 0 115200
 
 # beeper
+beeper -RX_LOST
 beeper -BAT_CRIT_LOW
 beeper -BAT_LOW
 beeper -ON_USB
 
-# beacon
-beacon RX_LOST
-beacon RX_SET
-
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 2 900 1200 0 0
-aux 2 2 2 1300 1700 0 0
-aux 3 27 5 1800 2100 0 0
-aux 4 46 1 1800 2100 0 0
-aux 5 13 1 1300 1700 0 0
-aux 6 35 4 1800 2100 0 0
+aux 1 1 2 900 1800 0 0
+aux 2 27 5 1800 2100 0 0
+aux 3 46 1 1800 2100 0 0
+aux 4 13 1 1300 1700 0 0
+aux 5 35 4 1800 2100 0 0
+aux 6 52 2 1300 2100 0 0
 
 # rxfail
 rxfail 3 s 1500
@@ -56,7 +53,7 @@ set dyn_notch_min_hz = 90
 set dyn_notch_max_hz = 500
 set gyro_lpf1_dyn_min_hz = 275
 set gyro_lpf1_dyn_max_hz = 550
-set acc_calibration = -12,10,-2,1
+set acc_calibration = 10,7,-3,1
 set rc_smoothing_auto_factor = 90
 set blackbox_sample_rate = 1/8
 set dshot_bidir = ON
@@ -84,8 +81,8 @@ set yaw_deadband = 2
 set simplified_gyro_filter_multiplier = 110
 set osd_units = IMPERIAL
 set osd_rssi_dbm_alarm = -105
-set osd_vbat_pos = 3586
-set osd_rssi_pos = 3593
+set osd_vbat_pos = 3618
+set osd_rssi_pos = 3625
 set osd_link_quality_pos = 1484
 set osd_link_tx_power_pos = 3087
 set osd_rssi_dbm_pos = 1452
@@ -107,7 +104,7 @@ set osd_altitude_pos = 2192
 set osd_debug_pos = 364
 set osd_warnings_pos = 14741
 set osd_avg_cell_voltage_pos = 1536
-set osd_core_temp_pos = 3120
+set osd_core_temp_pos = 3119
 set osd_stat_bitmask = 1879062316
 set debug_mode = GYRO_SCALED
 set craft_name = MOZ-7 V2
