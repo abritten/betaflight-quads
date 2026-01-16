@@ -1,30 +1,30 @@
-checksum: 25183
+checksum: 43479
 manuallyEdited: 0
 timezoneMinutes: 0
 semver: 2.10.0
 board: pocket
 calib: 
    LH:
-      mid: 1047
-      spanNeg: 816
-      spanPos: 826
+      mid: 1040
+      spanNeg: 833
+      spanPos: 841
    LV:
       mid: 1031
-      spanNeg: 870
-      spanPos: 835
+      spanNeg: 687
+      spanPos: 717
    RV:
-      mid: 1051
-      spanNeg: 829
-      spanPos: 867
+      mid: 1049
+      spanNeg: 773
+      spanPos: 693
    RH:
-      mid: 1047
-      spanNeg: 694
-      spanPos: 745
+      mid: 1032
+      spanNeg: 871
+      spanPos: 824
    P1:
-      mid: 1118
-      spanNeg: 434
-      spanPos: 435
-currModel: 6
+      mid: 1054
+      spanNeg: 504
+      spanPos: 504
+currModel: 1
 contrast: 15
 vBatWarn: 56
 txVoltageCalibration: -6
@@ -65,7 +65,7 @@ internalModuleBaudrate: 4
 splashMode: 2
 hapticMode: mode_nokeys
 switchesDelay: 0
-lightAutoOff: 12
+lightAutoOff: 2
 templateSetup: 21
 PPM_Multiplier: 0
 hapticLength: 2
@@ -73,11 +73,11 @@ beepLength: 1
 hapticStrength: 2
 gpsFormat: 0
 speakerPitch: 0
-speakerVolume: 2
+speakerVolume: 23
 vBatMin: 50
 vBatMax: 84
-backlightBright: 95
-globalTimer: 1107959
+backlightBright: 85
+globalTimer: 1609105
 bluetoothBaudrate: 0
 bluetoothMode: OFF
 countryCode: 0
@@ -122,17 +122,17 @@ switchConfig:
       name: ""
 backlightColor: 0
 bluetoothName: "73742Q-\x80"
-ownerRegistrationID: "ZOHD ALT"
+ownerRegistrationID: "QUAD MOD"
 rotEncMode: 1
 uartSampleMode: 1
 audioMuteEnable: 0
-radioGFDisabled: 1
-radioTrainerDisabled: 1
+radioGFDisabled: 0
+radioTrainerDisabled: 0
 modelHeliDisabled: 0
 modelFMDisabled: 0
-modelCurvesDisabled: 1
+modelCurvesDisabled: 0
 modelGVDisabled: 0
-modelLSDisabled: 1
+modelLSDisabled: 0
 modelSFDisabled: 0
 modelCustomScriptsDisabled: 0
 modelTelemetryDisabled: 0

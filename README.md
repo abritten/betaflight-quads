@@ -78,8 +78,9 @@ Settings for transmitters.
 **Radiomaster Pocket**
 - Cinerace20 9/29/24
 - Conscendo 9/29/24
-- GM5 1/19/25
+- QUAD MODE 1/15/26
 - Liftoff 1/19/25
+- ZOHD ALTUS 1/15/26
 
 **IRX4**
 - Spectrum DSM

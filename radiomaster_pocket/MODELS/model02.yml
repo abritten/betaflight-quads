@@ -1,6 +1,6 @@
 semver: 2.10.0
 header: 
-   name: "GM5"
+   name: "LIFTOFF"
 timers: 
    0:
       start: 0
@@ -304,26 +304,22 @@ customFn:
       swtch: "SC0"
       func: PLAY_TRACK
       def: "fm-ang,1x"
-   2:
-      swtch: "SC1"
-      func: PLAY_TRACK
-      def: "fm-hor,1x"
    3:
       swtch: "SC2"
       func: PLAY_TRACK
       def: "fm-acr,1x"
    4:
       swtch: "SD2"
-      func: PLAY_TRACK
-      def: "lghton,1x"
+      func: PLAY_SOUND
+      def: "Bp1,1x"
    5:
       swtch: "SE2"
       func: PLAY_TRACK
-      def: "turton,1x"
+      def: "rth,1x"
    6:
-      swtch: "SB1"
+      swtch: "SB2"
       func: PLAY_SOUND
-      def: "Sirn,1"
+      def: "Bp3,1x"
    7:
       swtch: "SD0"
       func: PLAY_SOUND
@@ -336,15 +332,11 @@ customFn:
       swtch: "SA0"
       func: PLAY_TRACK
       def: "disarm,1x"
-   10:
-      swtch: "SB2"
-      func: PLAY_TRACK
-      def: "gps,5"
 flightModeData: 
    0:
       trim: 
-         0:
-            value: -2
+         3:
+            value: 2
             mode: 0
       name: ""
       swtch: "NONE"
@@ -378,16 +370,6 @@ rfAlarms:
 thrTrimSw: 0
 potsWarnMode: WARN_MANUAL
 jitterFilter: GLOBAL
-moduleData: 
-   0:
-      type: TYPE_CROSSFIRE
-      subType: 0
-      channelsStart: 0
-      channelsCount: 16
-      failsafeMode: NOT_SET
-      mod: 
-         crsf: 
-            telemetryBaudrate: 0
 failsafeChannels: 
    0:
       val: 2

@@ -1,6 +1,6 @@
 semver: 2.10.0
 header: 
-   name: "CINERACE20"
+   name: "QUAD MODE"
 timers: 
    0:
       start: 0
@@ -180,7 +180,7 @@ mixData:
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: ""
+   name: "FAILSF"
 limitData: 
    0:
       min: 0
@@ -275,7 +275,7 @@ expoData:
    swtch: "NONE"
    flightModes: 000000000
    weight: 100
-   name: ""
+   name: "SFAIL"
    offset: 0
    curve: 
       type: 1
@@ -303,15 +303,15 @@ customFn:
    1:
       swtch: "SC0"
       func: PLAY_TRACK
-      def: "fm-ang,1x"
+      def: "angmod,1x"
    2:
       swtch: "SC1"
       func: PLAY_TRACK
-      def: "fm-hor,1x"
+      def: "angmod,1x"
    3:
       swtch: "SC2"
       func: PLAY_TRACK
-      def: "fm-acr,1x"
+      def: "acrmod,1x"
    4:
       swtch: "SD2"
       func: PLAY_TRACK
@@ -321,7 +321,7 @@ customFn:
       func: PLAY_TRACK
       def: "turton,1x"
    6:
-      swtch: "SB2"
+      swtch: "SB1"
       func: PLAY_SOUND
       def: "Sirn,1"
    7:
@@ -336,14 +336,22 @@ customFn:
       swtch: "SA0"
       func: PLAY_TRACK
       def: "disarm,1x"
+   10:
+      swtch: "SB2"
+      func: PLAY_TRACK
+      def: "gps,5"
+   11:
+      swtch: "SC0"
+      func: PLAY_SOUND
+      def: "Tick,1x"
 thrTraceSrc: Thr
-switchWarningState: AuBuCuDu
+switchWarningState: AuBuCuDuEu
 rssiSource: none
 rfAlarms: 
    warning: 45
    critical: 42
 thrTrimSw: 0
-potsWarnMode: WARN_OFF
+potsWarnMode: WARN_MANUAL
 jitterFilter: GLOBAL
 moduleData: 
    0:
@@ -373,7 +381,10 @@ inputNames:
       val: "Thr"
    3:
       val: "Rud"
-potsWarnEnabled: 0
+potsWarnEnabled: 1
+potsWarnPosition: 
+   0:
+      val: -64
 telemetrySensors: 
    0:
       id1: 
