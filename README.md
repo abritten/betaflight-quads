@@ -19,7 +19,7 @@ betaflight settings for quads.
 ---
 
 
-**OasisFly25**
+**Sub250 OasisFly25**
 
 - O4 Pro + ELRS Bind and fly.
 - M10 SUB250 GPS. 
