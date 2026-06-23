@@ -357,12 +357,12 @@ mode_color 7 0 9
 
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 2 900 1300 0 0
-aux 2 2 2 1300 1700 0 0
-aux 3 46 1 1800 2100 0 0
-aux 4 13 1 1300 1700 0 0
-aux 5 15 3 900 1200 0 0
-aux 6 35 4 1800 2100 0 0
+aux 1 1 2 900 1800 0 0
+aux 2 46 1 1800 2100 0 0
+aux 3 13 1 1300 1700 0 0
+aux 4 15 3 900 1200 0 0
+aux 5 35 4 1800 2100 0 0
+aux 6 52 2 1300 2100 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
 aux 9 0 0 900 900 0 0
@@ -483,7 +483,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -28,4,-22,1
+set acc_calibration = 6,-5,-24,1
 set baro_bustype = I2C
 set baro_spi_device = 0
 set baro_i2c_device = 1

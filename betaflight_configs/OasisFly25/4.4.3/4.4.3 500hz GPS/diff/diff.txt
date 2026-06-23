@@ -50,12 +50,12 @@ mode_color 7 0 9
 
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 2 900 1300 0 0
-aux 2 2 2 1300 1700 0 0
-aux 3 46 1 1800 2100 0 0
-aux 4 13 1 1300 1700 0 0
-aux 5 15 3 900 1200 0 0
-aux 6 35 4 1800 2100 0 0
+aux 1 1 2 900 1800 0 0
+aux 2 46 1 1800 2100 0 0
+aux 3 13 1 1300 1700 0 0
+aux 4 15 3 900 1200 0 0
+aux 5 35 4 1800 2100 0 0
+aux 6 52 2 1300 2100 0 0
 
 # rxfail
 rxfail 3 s 1275
@@ -68,7 +68,7 @@ set dyn_notch_count = 1
 set dyn_notch_q = 500
 set gyro_lpf1_dyn_min_hz = 325
 set gyro_lpf1_dyn_max_hz = 650
-set acc_calibration = -28,4,-22,1
+set acc_calibration = 6,-5,-24,1
 set rc_smoothing_auto_factor = 250
 set rc_smoothing_setpoint_cutoff = 25
 set rc_smoothing_feedforward_cutoff = 25
