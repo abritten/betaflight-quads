@@ -32,7 +32,10 @@ betaflight settings for quads.
 
 
 ---
+**Rekon 5 Mini Long Range**
+https://shop.addictiverc.com/products/rekon-5-mini-long-range-quad-digital-version-6s-tbs?srsltid=AfmBOoqY8LGfrmh7izpQQuCefXy7zYFx47J0tmg7TPUGeJpi2J_WOFRn
 
+---
 
 **GM5**
 
