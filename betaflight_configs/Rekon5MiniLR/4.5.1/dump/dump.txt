@@ -211,7 +211,7 @@ feature ANTI_GRAVITY
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 1 115200 57600 0 115200
+serial 0 131073 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
 serial 2 0 115200 57600 0 115200
 serial 3 2 115200 115200 0 115200
@@ -361,12 +361,12 @@ mode_color 7 0 3
 
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 3 900 1700 0 0
-aux 2 27 6 1950 2100 0 0
-aux 3 46 2 1800 2100 0 0
-aux 4 13 2 1300 1700 0 0
-aux 5 35 5 1900 2100 0 0
-aux 6 52 3 1300 2100 0 0
+aux 1 1 2 900 1700 0 0
+aux 2 27 5 1950 2100 0 0
+aux 3 46 1 1800 2100 0 0
+aux 4 13 1 1300 1700 0 0
+aux 5 35 4 1900 2100 0 0
+aux 6 52 2 1300 2100 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
 aux 9 0 0 900 900 0 0
@@ -492,7 +492,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -74,-18,-172,1
+set acc_calibration = -102,0,-87,1
 set baro_bustype = I2C
 set baro_spi_device = 0
 set baro_i2c_device = 1
@@ -732,45 +732,45 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 2421
-set osd_rssi_pos = 2427
+set osd_vbat_pos = 3590
+set osd_rssi_pos = 3596
 set osd_link_quality_pos = 333
-set osd_link_tx_power_pos = 2072
+set osd_link_tx_power_pos = 3087
 set osd_rssi_dbm_pos = 341
 set osd_rsnr_pos = 341
 set osd_tim_1_pos = 2080
-set osd_tim_2_pos = 2370
+set osd_tim_2_pos = 2535
 set osd_remaining_time_estimate_pos = 341
-set osd_flymode_pos = 2125
+set osd_flymode_pos = 2137
 set osd_anti_gravity_pos = 341
-set osd_g_force_pos = 2195
-set osd_throttle_pos = 2215
+set osd_g_force_pos = 2207
+set osd_throttle_pos = 2225
 set osd_vtx_channel_pos = 341
 set osd_crosshairs_pos = 312
 set osd_ah_sbar_pos = 313
 set osd_ah_pos = 185
-set osd_current_pos = 2226
-set osd_mah_drawn_pos = 2403
+set osd_current_pos = 2237
+set osd_mah_drawn_pos = 2568
 set osd_wh_drawn_pos = 341
 set osd_motor_diag_pos = 341
 set osd_craft_name_pos = 2048
 set osd_pilot_name_pos = 341
-set osd_gps_speed_pos = 2221
+set osd_gps_speed_pos = 2232
 set osd_gps_lon_pos = 341
 set osd_gps_lat_pos = 341
 set osd_gps_sats_pos = 2112
-set osd_home_dir_pos = 2094
+set osd_home_dir_pos = 2106
 set osd_home_dist_pos = 2144
 set osd_flight_dist_pos = 225
-set osd_compass_bar_pos = 2058
-set osd_altitude_pos = 2182
+set osd_compass_bar_pos = 2070
+set osd_altitude_pos = 2193
 set osd_pid_roll_pos = 341
 set osd_pid_pitch_pos = 341
 set osd_pid_yaw_pos = 341
 set osd_debug_pos = 341
 set osd_power_pos = 341
 set osd_pidrate_profile_pos = 341
-set osd_warnings_pos = 14633
+set osd_warnings_pos = 14805
 set osd_avg_cell_voltage_pos = 342
 set osd_pit_ang_pos = 341
 set osd_rol_ang_pos = 341
@@ -786,7 +786,7 @@ set osd_esc_rpm_freq_pos = 341
 set osd_rtc_date_time_pos = 341
 set osd_adjustment_range_pos = 341
 set osd_flip_arrow_pos = 341
-set osd_core_temp_pos = 2105
+set osd_core_temp_pos = 3119
 set osd_log_status_pos = 341
 set osd_stick_overlay_left_pos = 341
 set osd_stick_overlay_right_pos = 341
@@ -816,7 +816,7 @@ set osd_profile_1_name = -
 set osd_profile_2_name = -
 set osd_profile_3_name = -
 set osd_gps_sats_show_pdop = OFF
-set osd_displayport_device = AUTO
+set osd_displayport_device = MSP
 set osd_rcchannels = -1,-1,-1,-1
 set osd_camera_frame_width = 24
 set osd_camera_frame_height = 11
@@ -826,8 +826,8 @@ set osd_menu_background = TRANSPARENT
 set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
-set osd_canvas_width = 30
-set osd_canvas_height = 13
+set osd_canvas_width = 53
+set osd_canvas_height = 20
 set osd_craftname_msgs = OFF
 set task_statistics = ON
 set debug_mode = GYRO_SCALED
@@ -843,7 +843,7 @@ set vtx_softserial_alt = OFF
 set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
-set vcd_video_system = NTSC
+set vcd_video_system = HD
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = NOMINAL
