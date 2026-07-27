@@ -53,7 +53,8 @@ rxfail 3 s 1600
 rxfail 7 s 1000
 
 # master
-set acc_calibration = -102,0,-87,1
+set acc_calibration = 19,6,-185,1
+set baro_hardware = NONE
 set failsafe_delay = 12
 set failsafe_throttle_low_delay = 300
 set failsafe_procedure = GPS-RESCUE
@@ -66,7 +67,7 @@ set gps_ublox_use_galileo = ON
 set gps_set_home_point_once = ON
 set gps_rescue_min_start_dist = 10
 set gps_rescue_alt_mode = CURRENT_ALT
-set gps_rescue_initial_climb = 15
+set gps_rescue_initial_climb = 0
 set gps_rescue_ascend_rate = 760
 set gps_rescue_ground_speed = 760
 set gps_rescue_descent_dist = 10
@@ -105,6 +106,7 @@ set vtx_power = 1
 set vtx_freq = 5658
 set pinio_config = 1,129,1,1
 set craft_name = Rekon5
+set altitude_prefer_baro = 0
 
 profile 0
 

@@ -27,6 +27,7 @@ betaflight settings for quads.
 - Ziptied battery input cable.
 - VIFLY Finder V2 Buzzer with battery seperated.
 - 3D printed custom GPS tail mount.
+- [4.4.3 firmware source](https://sub250.com/apps/help-center#hc-cli-files-oasisfly30-25-o4)
 
 ![pic](./betaflight_configs/OasisFly25/pictures/6.jpeg)
 
